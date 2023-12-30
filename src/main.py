@@ -12,7 +12,7 @@ client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
-    logger.info(f'Logged in as {self.user} (ID: {self.user.id})')
+    logger.info(f'Logged in as {client.user} (ID: {client.user.id})')
 
 
 client.run(config['bot']['token']);
