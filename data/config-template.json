@@ -1,5 +1,22 @@
 {
     "bot": {
-        "token": "your token here!"
+        "token": "your token here!",
+        "prefix": "your prefix here!",
+        "owner": "your id here!",
+        "status": "bot status here!",
+        "activities": [{
+            "type": "activity 1 type!",
+            "name": "activity 1 name!"
+        },
+        {
+            "type": "activity 2 type!",
+            "name": "activity 2 name!"
+        }],
+        "activityDelay": 60
+    },
+    "log": {
+        "level": "log level here!",
+        "channel": "log channel id here!",
+        "guild": "log guild id here!"
     }
 }
