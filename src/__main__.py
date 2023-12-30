@@ -1,5 +1,4 @@
 # TODO:
-# - Implement activity + activity rotation
 # - Respond to prefix with a template
 
 import discord
@@ -31,6 +30,8 @@ async def on_message(message):
         return
 
     if message.content.startswith(f'{config['bot']['prefix']}ping'):
-        await message.channel.send(f'pong! ({client.latency * 1000:.2f}ms)')
+        await message.reply(f'pong! ({client.latency * 1000:.2f}ms)')
+    elif message.content.startswith(f'{config['bot']['prefix']}'):
+        await message.reply('Hello! I\'m currently under development. That means I don\'t do much yet and whatever you just tried to do won\'t work. Please be patient!')
 
 client.run(config['bot']['token']);
