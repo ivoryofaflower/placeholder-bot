@@ -25,4 +25,12 @@ async def on_ready():
     logger.info(f'Logged in as {client.user} (ID: {client.user.id})')
     activity = ActivityRotation(client, config['bot']['activities']);
 
+@client.event
+async def on_message(message):
+    if message.author.bot:
+        return
+
+    if message.content.startswith(f'{config['bot']['prefix']}ping'):
+        await message.channel.send(f'pong! ({client.latency * 1000:.2f}ms)')
+
 client.run(config['bot']['token']);
