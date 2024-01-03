@@ -8,7 +8,7 @@ config = json.load(open("./data/config.json", "r"))
 class ActivityRotation:
     def __init__(self, bot, activities):
         self.bot = bot
-        self.logger = logging.getLogger('discord.activityRotation')
+        self.logger = logging.getLogger('discord.activity')
         self.logger.setLevel(config['log']['level'].upper())
         self.activities = activities
         self.index = 0
